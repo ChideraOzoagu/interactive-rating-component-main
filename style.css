@@ -89,7 +89,10 @@ button {
   border-radius: 16px;
   margin-bottom: 15px;
 }
-
+.active {
+  color: white;
+  background-color: hsl(217, 12%, 63%);
+}
 @media screen and (min-width: 500px){
   body {
     display: flex;
@@ -104,10 +107,10 @@ button {
     cursor: pointer;
 
   }
-  .active {
+  /* .active {
     color: white;
     background-color: hsl(217, 12%, 63%);
-  }
+  } */
   .submit:hover {
     color: hsl(25, 97%, 53%);
     background-color: white;
