@@ -107,10 +107,6 @@ button {
     cursor: pointer;
 
   }
-  /* .active {
-    color: white;
-    background-color: hsl(217, 12%, 63%);
-  } */
   .submit:hover {
     color: hsl(25, 97%, 53%);
     background-color: white;
