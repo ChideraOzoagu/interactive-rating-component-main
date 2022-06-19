@@ -39,7 +39,7 @@ button {
   color: white;
   padding: 10px 0;
 }
-.container p {
+.content {
   color: hsl(217, 12%, 63%);
   line-height: 1.5;
 }
@@ -89,10 +89,30 @@ button {
   border-radius: 16px;
   margin-bottom: 15px;
 }
+.button-digits:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+  transition: ease-in-out 0.4s;
+  cursor: pointer;
+
+}
+.submit:hover {
+  color: hsl(25, 97%, 53%);
+  background-color: white;
+  transition: ease-in-out 0.4s;
+  cursor: pointer;
+}
 .active {
   color: white;
   background-color: hsl(217, 12%, 63%);
 }
+.error-msg {
+  color: #FF9494;
+  text-align: center;
+  padding: 0.5rem 0;
+  text-transform: capitalize;
+}
+
 @media screen and (min-width: 500px){
   body {
     display: flex;
@@ -100,17 +120,5 @@ button {
     justify-content: center;
     height: 100vh; 
   }
-  .button-digits:hover {
-    background-color: hsl(25, 97%, 53%);
-    color: white;
-    transition: ease-in-out 0.4s;
-    cursor: pointer;
-
-  }
-  .submit:hover {
-    color: hsl(25, 97%, 53%);
-    background-color: white;
-    transition: ease-in-out 0.4s;
-    cursor: pointer;
-  }
+ 
 }

@@ -16,11 +16,11 @@
   <main class="container card1">
     <img src="./images/icon-star.svg" alt="star-icon" class="star">
     <h1>How did we do?</h1>
-    <p>
+    <p class="content">
       Please let us know how we did with your support request. All feedback is appreciated
       to help us improve our offering!
     </p>
-    <form class="submit-form">
+    <div class="submit-form">
       <div class="btn-container">
         <button type="button" class="button-digits">1</button>
         <button type="button" class="button-digits">2</button>
@@ -29,7 +29,8 @@
         <button type="button" class="button-digits">5</button>
       </div>
         <button type="submit" id="submit" class="submit">Submit</button>
-    </form>
+      </div>
+      <p class="error-msg"></p>
   </main>
 
   <!-- Rating state end -->
@@ -37,15 +38,15 @@
   <!-- Thank you state start -->
 
   
-  <main class="container card2">
+  <section class="container card2">
     <img src="./images/illustration-thank-you.svg" alt="illustration-thank-you" class="illustration">
     <button class="rating">You selected <span class="number"></span> out of 5</button>
     <h1>Thank you!</h1>
-    <p>
+    <p class="content">
       We appreciate you taking the time to give a rating. If you ever need more support,
       don’t hesitate to get in touch!
     </p>
-  </main>
+  </section>
 
   <!-- Thank you state end -->
   <script src="./app.js"></script>

@@ -1,34 +1,38 @@
+// 'use strict'
 const btns = document.querySelectorAll(".button-digits");
-const submitForm = document.querySelector(".submit-form");
 const number = document.querySelector(".number");
 const cardOne = document.querySelector(".card1");
 const cardTwo = document.querySelector(".card2");
 const submit = document.getElementById("submit");
+const error = document.querySelector(".error-msg");
+let button = 0;
 
 btns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    const btnNumber = e.target.textContent;
-    // updating rating on button click
-    if (btnNumber) {
-      number.textContent = `${btnNumber}`;
+  btn.addEventListener("click", () => {
+    button = btn.textContent;
+    if (button) {
+      number.textContent = button;
     }
     // switching active class
     btns.forEach((btn) => {
-      if (btn.textContent !== btnNumber) {
+      if (button !== btn.innerHTML) {
         btn.classList.remove("active");
       } else {
         btn.classList.add("active");
       }
     });
-    console.log(btn.textContent);
   });
 });
 
-submit.addEventListener("click", () => {
-  cardOne.style.display = "none";
-  cardTwo.style.display = "block";
-});
+submit.addEventListener("click", onSubmit);
 
-submitForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-});
+function onSubmit() {
+  if (button === 0) {
+    // alert("Please select a rating before submiting");
+    error.innerHTML = `Please select a rating before submiting`
+  } else {
+    number.innerHTML = button;
+    cardTwo.style.display = "block";
+    cardOne.style.display = "none";
+  }
+}
